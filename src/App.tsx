@@ -17,19 +17,19 @@ import {
 } from 'lucide-react';
 
 const IMAGES = {
-  hero: "https://i.postimg.cc/tgtJ7kJ1/480961144-941818678125148-3037792705025883459-n.jpg",
-  production: "https://i.postimg.cc/R0zqMySn/481020898-941803321460017-8461447160377720249-n.jpg",
-  cones: "https://i.postimg.cc/8CBcs4cb/480753262-941821381458211-2059226857396943844-n.jpg",
-  detail1: "https://i.postimg.cc/JhWt1vrb/480960481-941803224793360-6173252906819934744-n.jpg",
-  detail2: "https://i.postimg.cc/43bynPyV/481046533-941821491458200-5211304892360777474-n.jpg",
-  catering: "https://i.postimg.cc/zf13J6zW/481057821-941802964793386-8500870500046739899-n.jpg",
+  hero: "https://iili.io/BQLZlO7.jpg",
+  production: "https://iili.io/BQLsygV.jpg",
+  cones: "https://iili.io/BQLZcRS.jpg",
+  detail1: "https://iili.io/BQLL6CJ.jpg",
+  detail2: "https://iili.io/BQLLZvI.jpg",
+  catering: "https://iili.io/BQLLbTX.jpg",
   gallery: [
-    "https://i.postimg.cc/FKgz1pzp/481057858-941821471458202-7783894601647205844-n.jpg",
-    "https://i.postimg.cc/Bvcbtpbm/481059731-941821454791537-6535778530981969827-n.jpg",
-    "https://i.postimg.cc/HL4njzn9/481083849-941821481458201-4712006091994697700-n.jpg",
-    "https://i.postimg.cc/25f3zMkd/481084993-941818878125128-243131916248003929-n.jpg",
-    "https://i.postimg.cc/d0KDqps2/481189733-941818874791795-6359057596519914800-n.jpg",
-    "https://i.postimg.cc/TPq1h01r/481303693-941821461458203-393238435237643731-n.jpg"
+    "https://iili.io/BQLZaJ2.jpg",
+    "https://iili.io/BQLLQYN.jpg",
+    "https://iili.io/BQLLmjn.jpg",
+    "https://iili.io/BQLQ9CG.jpg",
+    "https://iili.io/BQLQqu9.jpg",
+    "https://iili.io/BQLQBje.jpg"
   ]
 };
 
