@@ -13,16 +13,28 @@ import {
   Menu,
   X,
   MessageSquare,
-  ExternalLink
+  ExternalLink,
+  Coffee
 } from 'lucide-react';
 
 const IMAGES = {
-  hero: "https://iili.io/BQLZlO7.jpg",
+  hero: "https://iili.io/Bt9CrLF.jpg",
   production: "https://iili.io/BQLsygV.jpg",
+  aboutUs: "https://iili.io/BQLZlO7.jpg",
   cones: "https://iili.io/BQLZcRS.jpg",
   detail1: "https://iili.io/BQLL6CJ.jpg",
   detail2: "https://iili.io/BQLLZvI.jpg",
   catering: "https://iili.io/BQLLbTX.jpg",
+  miedzyrzec: [
+    "https://iili.io/BZyQiuV.jpg",
+    "https://iili.io/BZyQ6yQ.jpg",
+    "https://iili.io/BZyD8Gt.jpg"
+  ],
+  festyny: [
+    "https://iili.io/BZytzga.jpg",
+    "https://iili.io/BZytx0g.jpg"
+  ],
+  losice: "https://iili.io/BZytyIp.jpg",
   gallery: [
     "https://iili.io/BQLZaJ2.jpg",
     "https://iili.io/BQLLQYN.jpg",
@@ -32,6 +44,28 @@ const IMAGES = {
     "https://iili.io/BQLQBje.jpg"
   ]
 };
+
+const LOCATIONS = [
+  { 
+    city: "Międzyrzec Podlaski", 
+    address: "ul. Jana Pawła II 2", 
+    items: ["Lody gałkowe", "Lody włoskie", "Świderki", "Granita", "Shaki", "Kawa mrożona", "Flurry"],
+    image: IMAGES.miedzyrzec[2],
+    gallery: IMAGES.miedzyrzec
+  },
+  { 
+    city: "Łosice", 
+    address: "ul. Rynek 28a", 
+    items: ["Lody gałkowe", "Świderki", "Granita"],
+    image: "https://iili.io/BZytyIp.jpg"
+  },
+  { 
+    city: "Zbuczyn", 
+    address: "ul. Dębowa 1", 
+    items: ["Lody gałkowe", "Lody włoskie", "Granita"],
+    image: "https://iili.io/BQLsygV.jpg"
+  }
+];
 
 const REVIEWS = [
   { name: "Anna K.", text: "Najlepsze lody tradycyjne w regionie. Czuć naturalne składniki!", rating: 5 },
@@ -143,7 +177,7 @@ export default function App() {
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative order-2 lg:order-1">
                 <div className="space-y-6 sm:pt-16">
                   <div className="image-card aspect-[3/4]">
-                    <img src={IMAGES.production} alt="Nasza produkcja" />
+                    <img src={IMAGES.aboutUs} alt="Nasza produkcja" />
                   </div>
                   <div className="image-card aspect-square sm:translate-x-6">
                     <img src={IMAGES.detail1} alt="Lody z bliska" />
@@ -196,26 +230,44 @@ export default function App() {
       {/* Catering / Events Section */}
       <section id="imprezy" className="section-padding bg-stone-900 text-white relative overflow-hidden">
         <div className="absolute inset-x-0 bottom-0 top-1/2 bg-berry opacity-5" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 lg:gap-24 items-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-[1fr_1.2fr] gap-16 lg:gap-24 items-center relative z-10">
           <div>
-            <span className="text-berry font-black tracking-[0.3em] uppercase text-xs sm:text-sm mb-6 sm:mb-8 block">Wydarzenia Specjalne</span>
+            <span className="text-berry font-black tracking-[0.3em] uppercase text-xs sm:text-sm mb-6 sm:mb-8 block">Wydarzenia & Catering</span>
             <h2 className="font-display text-5xl sm:text-6xl lg:text-8xl font-bold mb-8 lg:mb-12 leading-[0.9]">
-              Lody na <br /> Twoim <br /> <span className="text-stone-400">weselu.</span>
+              Jesteśmy <br /> tam, gdzie <br /> <span className="text-stone-400">Ty.</span>
             </h2>
             <p className="text-xl sm:text-2xl text-stone-400 mb-10 lg:mb-16 max-w-xl">
-              Uatrakcyjnij swoją imprezę naszą ofertą cateringową. Obsługujemy wesela, chrzciny, komunie oraz urodziny. 
-              Mobilna stacja lodowa to gwarancja uśmiechu Twoich gości.
+              Bierzemy udział w imprezach plenerowych: festynach i piknikach rodzinnych. Serwujemy nasze lody gałkowe, świderki, granitę oraz chrupiące nachosy.
+              <br /><br />
+              Oferujemy również mobilne stacje lodowe na wesela, chrzciny i komunie.
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4">
-               {['Wesela', 'Chrzciny', 'Eventy'].map(tag => (
+               {['Festyny', 'Pikniki', 'Wesela', 'Nachosy'].map(tag => (
                  <span key={tag} className="px-4 s:px-6 py-2 border border-white/20 rounded-full text-[10px] sm:text-sm font-bold uppercase tracking-widest">{tag}</span>
                ))}
             </div>
           </div>
           
-          <div className="relative pt-12 sm:pt-0">
-            <div className="image-card aspect-square rounded-[2rem] sm:rounded-[4rem] border-[8px] sm:border-[12px] border-stone-800">
-               <img src={IMAGES.catering} alt="Catering lodowy" />
+          <div className="relative pt-12 sm:pt-32 pr-20 sm:pr-0">
+            <div className="relative flex flex-col items-center">
+              <motion.div 
+                initial={{ opacity: 0, x: 50, rotate: 2 }}
+                whileInView={{ opacity: 1, x: 0, rotate: -2 }}
+                viewport={{ once: true }}
+                className="relative z-10 w-[85%] -ml-[25%] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] rounded-[2rem] sm:rounded-[3rem] overflow-hidden"
+              >
+                <img src={IMAGES.festyny[0]} alt="Festyn 1" className="w-full h-auto block" />
+              </motion.div>
+              
+              <motion.div 
+                initial={{ opacity: 0, x: -50, rotate: -2 }}
+                whileInView={{ opacity: 1, x: 0, rotate: 3 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="relative z-20 w-[85%] -mr-[25%] -mt-[15%] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] rounded-[2rem] sm:rounded-[3rem] overflow-hidden"
+              >
+                <img src={IMAGES.festyny[1]} alt="Festyn 2" className="w-full h-auto block" />
+              </motion.div>
             </div>
             <a 
               href="#kontakt" 
@@ -233,7 +285,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16 lg:mb-24">
             <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 lg:mb-8">Nasza Galeria</h2>
-            <p className="text-stone-500 text-lg sm:text-xl font-medium">Kliknij w zdjęcie, aby zobaczyć je w pełnej okazałości.</p>
+            <p className="text-stone-500 text-lg sm:text-xl font-medium">Zdjęcia z naszych lokali oraz imprez plenerowych.</p>
           </div>
           
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 sm:gap-8 space-y-6 sm:space-y-8">
@@ -330,69 +382,127 @@ export default function App() {
 
             <div className="flex-1 grid grid-cols-2 gap-4 relative z-10 w-full md:w-auto">
               <div className="image-card aspect-square rounded-2xl sm:rounded-3xl">
-                <img src={IMAGES.gallery[0]} alt="FB 1" />
+                <img src="https://iili.io/Bt9TirX.jpg" alt="FB 1" />
               </div>
               <div className="image-card aspect-square rounded-2xl sm:rounded-3xl translate-y-6 sm:translate-y-8">
-                <img src={IMAGES.gallery[1]} alt="FB 2" />
+                <img src="https://iili.io/Bt9TQ7s.jpg" alt="FB 2" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Locations - Dark Section */}
-      <section id="kontakt" className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="bg-stone-900 rounded-[2.5rem] sm:rounded-[4rem] lg:rounded-[5rem] overflow-hidden grid lg:grid-cols-2 shadow-2xl">
-            <div className="p-8 sm:p-16 lg:p-24">
-              <h2 className="font-display text-4xl sm:text-5xl font-bold text-white mb-12 sm:mb-16 underline decoration-berry/50 decoration-4 underline-offset-8">Gdzie jesteśmy?</h2>
-              
-              <div className="space-y-10 sm:space-y-12">
-                {[
-                  { c: "Łosice", a: "ul. Rynek 28" },
-                  { c: "Międzyrzec Podlaski", a: "Pl. Jana Pawła II 2" }
-                ].map((loc, i) => (
-                  <div key={i} className="flex gap-6 sm:gap-8 items-start group">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/5 rounded-xl sm:rounded-2xl flex-shrink-0 flex items-center justify-center text-berry group-hover:bg-berry group-hover:text-white transition-all">
-                      <MapPin className="w-6 h-6 sm:w-7 sm:h-7" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl sm:text-2xl font-bold text-white mb-1">{loc.c}</h4>
-                      <p className="text-sm sm:text-base text-stone-400 font-medium">{loc.a}</p>
-                    </div>
-                  </div>
-                ))}
+      {/* Locations - Individual Sections */}
+      <section id="kontakt" className="bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+          <div className="text-center mb-16 px-4">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold mb-8">Nasz świat <span className="text-berry">lodów</span></h2>
+            <p className="text-lg sm:text-xl text-stone-500 max-w-2xl mx-auto">Zapraszamy do naszych trzech wyjątkowych punktów. Każdy z nich to inna historia, ale ta sama rzemieślnicza pasja.</p>
+          </div>
+        </div>
 
-                <div className="pt-10 sm:pt-12 border-t border-white/10 space-y-6 sm:space-y-8">
-                  <div className="flex gap-6 sm:gap-8 items-center">
-                    <Phone className="w-6 h-6 sm:w-8 sm:h-8 text-berry flex-shrink-0" />
-                    <a href="tel:+48507419726" className="text-xl sm:text-2xl font-bold text-white hover:text-berry transition-colors">507 419 726</a>
+        {LOCATIONS.map((loc, i) => (
+          <div key={i} className={`py-16 sm:py-24 ${i % 2 === 1 ? 'bg-cream/30' : 'bg-white'}`}>
+            <div className="max-w-7xl mx-auto px-6 lg:px-12">
+              <div className={`grid lg:grid-cols-2 gap-12 lg:gap-24 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+                <motion.div 
+                  initial={{ opacity: 0, x: i % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className={`${i % 2 === 1 ? 'lg:order-2' : ''}`}
+                >
+                  <div className="relative">
+                    {loc.gallery ? (
+                      <div className="grid grid-cols-2 gap-6 sm:gap-8">
+                        <div className="image-card aspect-square rounded-2xl overflow-hidden shadow-xl">
+                          <img src={loc.gallery[0]} alt={`${loc.city} 1`} />
+                        </div>
+                        <div className="image-card aspect-square rounded-2xl overflow-hidden shadow-xl translate-y-8 sm:translate-y-12">
+                          <img src={loc.gallery[1]} alt={`${loc.city} 2`} />
+                        </div>
+                        <div className="image-card aspect-[4/3] rounded-2xl overflow-hidden shadow-xl col-span-2 mt-4 sm:mt-8">
+                          <img src={loc.gallery[2]} alt={`${loc.city} 3`} />
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl">
+                        <img src={loc.image} alt={loc.city} className="w-full h-full object-cover" />
+                      </div>
+                    )}
+                    {loc.city === "Międzyrzec Podlaski" && (
+                      <div className="absolute -bottom-6 -right-6 bg-berry text-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl hidden sm:flex flex-col items-center text-center">
+                        <Coffee className="w-6 h-6 sm:w-8 sm:h-8 mb-2" />
+                        <span className="font-bold block text-sm sm:text-lg">Najszersza<br />Oferta</span>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex gap-6 sm:gap-8 items-center">
-                    <Mail className="w-6 h-6 sm:w-8 sm:h-8 text-berry flex-shrink-0" />
-                    <a href="mailto:radekpniewskii@interia.pl" className="text-base sm:text-xl font-medium text-stone-400 hover:text-white transition-colors break-all">radekpniewskii@interia.pl</a>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, x: i % 2 === 0 ? 50 : -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className={`${i % 2 === 1 ? 'lg:order-1' : ''}`}
+                >
+                  <div className="inline-flex items-center gap-2 text-berry font-black tracking-widest text-[10px] uppercase mb-4 sm:mb-6">
+                    <MapPin className="w-4 h-4" />
+                    Lokalizacja
                   </div>
-                </div>
+                  <h3 className="font-display text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6 leading-tight">{loc.city}</h3>
+                  <p className="text-xl sm:text-2xl text-stone-900 font-bold mb-8">{loc.address}</p>
+                  
+                  <div className="space-y-4 mb-8 sm:mb-12">
+                    <p className="text-stone-500 font-bold uppercase tracking-widest text-[10px]">U nas znajdziesz:</p>
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
+                      {loc.items.map((item, j) => (
+                        <span key={j} className="px-4 sm:px-5 py-1.5 sm:py-2 bg-white border border-stone-200 rounded-full text-[10px] sm:text-sm font-bold text-stone-700 shadow-sm whitespace-nowrap">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <a 
+                    href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${loc.city} ${loc.address}`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-3 text-stone-900 font-bold hover:text-berry transition-colors group text-sm sm:text-base"
+                  >
+                    Nawiguj do lokalu
+                    <ArrowRight className="w-4 h-4 sm:w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                  </a>
+                </motion.div>
               </div>
             </div>
+          </div>
+        ))}
 
-            <div className="relative min-h-[350px] sm:min-h-[400px] flex items-center justify-center p-8 sm:p-12 bg-berry/10">
-               <div className="text-center relative z-10">
-                 <div className="w-16 h-16 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center text-stone-900 mb-6 sm:mb-8 mx-auto shadow-2xl">
-                    <MessageSquare className="w-8 h-8 sm:w-10 sm:h-10" />
-                 </div>
-                 <h3 className="text-2xl sm:text-3xl font-display font-black text-white mb-4 sm:mb-6 uppercase tracking-tighter">Czekamy na Ciebie!</h3>
-                 <p className="text-sm sm:text-base text-stone-300 max-w-sm mb-8 sm:mb-12 mx-auto">Masz pytania dotyczące składników lub zamówień na imprezy? Zadaj je nam przez email lub telefon.</p>
-                 <a 
-                  href="https://www.facebook.com/profile.php?id=100068910726686&sk=reviews&locale=pl_PL" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="px-8 sm:px-10 py-3 sm:py-4 bg-white text-stone-900 rounded-full font-bold hover:bg-berry hover:text-white transition-all text-sm"
-                 >
-                   Opinie Klientów
-                 </a>
-               </div>
-               <div className="absolute top-0 right-0 w-64 h-64 bg-berry/20 blur-[100px] rounded-full" />
+        {/* Contact Details Banner */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 pb-24">
+          <div className="bg-stone-900 rounded-[2.5rem] sm:rounded-[3rem] lg:rounded-[5rem] overflow-hidden p-8 sm:p-12 lg:p-24 flex flex-col lg:flex-row justify-between items-center gap-12 mt-16 sm:mt-24">
+            <div className="text-center lg:text-left">
+              <h3 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">Masz pytania?</h3>
+              <p className="text-stone-400 text-lg sm:text-xl max-w-md mx-auto lg:mx-0">Skontaktuj się z nami bezpośrednio lub odwiedź nas w jednym z naszych punktów.</p>
+            </div>
+            
+            <div className="flex flex-col gap-8 lg:gap-10 items-center lg:items-end w-full lg:w-auto">
+              <div className="text-center lg:text-right w-full">
+                <div className="flex items-center justify-center lg:justify-end gap-3 text-berry mb-2">
+                   <Phone className="w-5 h-5" />
+                   <span className="font-black uppercase tracking-widest text-[10px]">Zadzwoń do nas</span>
+                </div>
+                <a href="tel:+48507419726" className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white hover:text-berry transition-colors whitespace-nowrap">507 419 726</a>
+              </div>
+              
+              <div className="h-px w-24 bg-white/10" />
+
+              <div className="text-center lg:text-right w-full">
+                <div className="flex items-center justify-center lg:justify-end gap-3 text-berry mb-2">
+                   <Mail className="w-5 h-5" />
+                   <span className="font-black uppercase tracking-widest text-[10px]">Napisz e-mail</span>
+                </div>
+                <a href="mailto:radekpniewskii@interia.pl" className="text-xl sm:text-2xl lg:text-3xl font-display font-bold text-white/80 hover:text-white transition-colors whitespace-nowrap">radekpniewskii@interia.pl</a>
+              </div>
             </div>
           </div>
         </div>
