@@ -25,10 +25,10 @@ export default function SocialJoin() {
 
           <div className="flex-1 grid grid-cols-2 gap-4 relative z-10 w-full md:w-auto">
             <div className="image-card aspect-square rounded-2xl sm:rounded-3xl">
-              <img src="https://iili.io/Bt9TirX.jpg" alt="FB 1" loading="lazy" />
+              <img src="https://iili.io/Bt9TirX.jpg" alt="FB 1" loading="lazy" decoding="async" />
             </div>
             <div className="image-card aspect-square rounded-2xl sm:rounded-3xl translate-y-6 sm:translate-y-8">
-              <img src="https://iili.io/Bt9TQ7s.jpg" alt="FB 2" loading="lazy" />
+              <img src="https://iili.io/Bt9TQ7s.jpg" alt="FB 2" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>

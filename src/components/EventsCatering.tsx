@@ -33,7 +33,7 @@ export default function EventsCatering() {
               viewport={{ once: true }}
               className="relative z-10 w-[85%] -ml-[15%] sm:-ml-[25%] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.5)] rounded-[2rem] sm:rounded-[3rem] overflow-hidden"
             >
-              <img src={IMAGES.festyny[0]} alt="Festyn 1" className="w-full h-auto block" loading="lazy" />
+              <img src={IMAGES.festyny[0]} alt="Festyn 1" className="w-full h-auto block" loading="lazy" decoding="async" />
             </motion.div>
             
             <motion.div 
@@ -43,7 +43,7 @@ export default function EventsCatering() {
               transition={{ delay: 0.2 }}
               className="relative z-20 w-[85%] -mr-[15%] sm:-mr-[25%] -mt-[15%] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.6)] rounded-[2rem] sm:rounded-[3rem] overflow-hidden"
             >
-              <img src={IMAGES.festyny[1]} alt="Festyn 2" className="w-full h-auto block" loading="lazy" />
+              <img src={IMAGES.festyny[1]} alt="Festyn 2" className="w-full h-auto block" loading="lazy" decoding="async" />
             </motion.div>
           </div>
           <a 

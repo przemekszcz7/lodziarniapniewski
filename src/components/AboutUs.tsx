@@ -10,18 +10,18 @@ export default function AboutUs() {
            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative order-2 lg:order-1">
               <div className="space-y-6 sm:pt-16">
                 <div className="image-card aspect-[3/4]">
-                  <img src={IMAGES.aboutUs} alt="Nasza produkcja" loading="lazy" />
+                  <img src={IMAGES.aboutUs} alt="Nasza produkcja" loading="lazy" decoding="async" />
                 </div>
                 <div className="image-card aspect-square sm:translate-x-6">
-                  <img src={IMAGES.detail1} alt="Lody z bliska" loading="lazy" />
+                  <img src={IMAGES.detail1} alt="Lody z bliska" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="space-y-6">
                 <div className="image-card aspect-square sm:-translate-x-6">
-                  <img src={IMAGES.detail2} alt="Detale lodów" loading="lazy" />
+                  <img src={IMAGES.detail2} alt="Detale lodów" loading="lazy" decoding="async" />
                 </div>
                 <div className="image-card aspect-[3/4]">
-                  <img src={IMAGES.cones} alt="Wafelki i lody" loading="lazy" />
+                  <img src={IMAGES.cones} alt="Wafelki i lody" loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 sm:w-32 sm:h-32 bg-berry rounded-full flex items-center justify-center text-white shadow-2xl z-20 border-4 sm:border-8 border-white">

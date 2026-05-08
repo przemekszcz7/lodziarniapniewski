@@ -38,7 +38,13 @@ export default function Hero() {
             className="relative hidden sm:block"
           >
             <div className="aspect-[4/5] rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] relative z-10 border-[8px] lg:border-[16px] border-white">
-              <img src={IMAGES.hero} alt="Lody Hero" className="w-full h-full object-cover" />
+              <img 
+                src={IMAGES.hero} 
+                alt="Lody Hero" 
+                className="w-full h-full object-cover" 
+                fetchPriority="high"
+                decoding="sync"
+              />
             </div>
             <div className="absolute -top-12 -left-12 w-48 h-48 bg-gold/10 rounded-full blur-3xl" />
             <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-berry/10 rounded-full blur-3xl font-display italic text-berry/20 text-7xl lg:text-9xl">Creamy</div>

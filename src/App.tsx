@@ -32,7 +32,13 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-20">
           <div className="flex items-center">
             <a href="#" className="flex items-center gap-3 group" aria-label="Lodziarnia Pniewski - Strona główna">
-              <img src={IMAGES.logo} alt="Lodziarnia Pniewski Logo" className="h-12 w-auto object-contain" />
+              <img 
+                src={IMAGES.logo} 
+                alt="Lodziarnia Pniewski Logo" 
+                className="h-12 w-auto object-contain" 
+                fetchPriority="high"
+                decoding="sync"
+              />
               <span className="font-display text-xl sm:text-2xl font-bold tracking-tight hidden sm:block">
                 Lodziarnia <span className="text-berry">Pniewski</span>
               </span>
@@ -98,7 +104,13 @@ export default function App() {
       <footer className="py-12 sm:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col items-center border-t border-stone-200/50 pt-12 sm:pt-16">
           <div className="mb-6 sm:mb-8 flex flex-col items-center text-center">
-            <img src={IMAGES.logo} alt="Lodziarnia Pniewski Logo" className="h-16 w-auto object-contain mb-4" />
+            <img 
+              src={IMAGES.logo} 
+              alt="Lodziarnia Pniewski Logo" 
+              className="h-16 w-auto object-contain mb-4" 
+              loading="lazy"
+              decoding="async"
+            />
             <span className="font-display font-black text-2xl sm:text-3xl tracking-tighter uppercase block">Lodziarnia <span className="text-berry">Pniewski</span></span>
           </div>
           <div className="text-stone-400 font-bold uppercase tracking-widest text-[8px] sm:text-[10px] mb-8">

@@ -27,18 +27,18 @@ export default function Locations() {
                   {loc.gallery ? (
                     <div className="grid grid-cols-2 gap-6 sm:gap-8">
                       <div className="image-card aspect-square rounded-2xl overflow-hidden shadow-xl">
-                        <img src={loc.gallery[0]} alt={`${loc.city} 1`} loading="lazy" />
+                        <img src={loc.gallery[0]} alt={`${loc.city} 1`} loading="lazy" decoding="async" />
                       </div>
                       <div className="image-card aspect-square rounded-2xl overflow-hidden shadow-xl translate-y-8 sm:translate-y-12">
-                        <img src={loc.gallery[1]} alt={`${loc.city} 2`} loading="lazy" />
+                        <img src={loc.gallery[1]} alt={`${loc.city} 2`} loading="lazy" decoding="async" />
                       </div>
                       <div className="image-card aspect-[4/3] rounded-2xl overflow-hidden shadow-xl col-span-2 mt-4 sm:mt-8">
-                        <img src={loc.gallery[2]} alt={`${loc.city} 3`} loading="lazy" />
+                        <img src={loc.gallery[2]} alt={`${loc.city} 3`} loading="lazy" decoding="async" />
                       </div>
                     </div>
                   ) : (
                     <div className="aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl">
-                      <img src={loc.image} alt={loc.city} className="w-full h-full object-cover" loading="lazy" />
+                      <img src={loc.image} alt={loc.city} className="w-full h-full object-cover" loading="lazy" decoding="async" />
                     </div>
                   )}
                   {loc.city === "Międzyrzec Podlaski" && (
