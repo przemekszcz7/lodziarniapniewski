@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { IceCream, Zap, ArrowRight } from 'lucide-react';
 import { IMAGES } from '../constants';
 
-export default function AboutUs() {
+const AboutUs = memo(function AboutUs() {
   return (
     <section id="o-nas" className="section-padding bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -60,4 +60,6 @@ export default function AboutUs() {
       </div>
     </section>
   );
-}
+});
+
+export default AboutUs;

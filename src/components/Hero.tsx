@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { motion } from 'motion/react';
 import { Zap, ArrowRight } from 'lucide-react';
 import { IMAGES } from '../constants';
 
-export default function Hero() {
+const Hero = memo(function Hero() {
   return (
     <section className="relative pt-32 lg:pt-56 pb-16 lg:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -40,8 +40,10 @@ export default function Hero() {
             <div className="aspect-[4/5] rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] relative z-10 border-[8px] lg:border-[16px] border-white">
               <img 
                 src={IMAGES.hero} 
-                alt="Lody Hero" 
+                alt="Prawdziwe lody rzemieślnicze Lodziarnia Pniewski" 
                 className="w-full h-full object-cover" 
+                width="800"
+                height="1000"
                 fetchPriority="high"
                 decoding="sync"
               />
@@ -53,4 +55,6 @@ export default function Hero() {
       </div>
     </section>
   );
-}
+});
+
+export default Hero;

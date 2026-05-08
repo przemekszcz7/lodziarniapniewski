@@ -36,6 +36,8 @@ export default function App() {
                 src={IMAGES.logo} 
                 alt="Lodziarnia Pniewski Logo" 
                 className="h-12 w-auto object-contain" 
+                width="48"
+                height="48"
                 fetchPriority="high"
                 decoding="sync"
               />
@@ -106,8 +108,10 @@ export default function App() {
           <div className="mb-6 sm:mb-8 flex flex-col items-center text-center">
             <img 
               src={IMAGES.logo} 
-              alt="Lodziarnia Pniewski Logo" 
+              alt="Lodziarnia Pniewski Logo - Lody z tradycją" 
               className="h-16 w-auto object-contain mb-4" 
+              width="64"
+              height="64"
               loading="lazy"
               decoding="async"
             />
