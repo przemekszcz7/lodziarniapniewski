@@ -31,10 +31,10 @@ export default function App() {
       <nav className="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur-xl border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex justify-between items-center h-20">
           <div className="flex items-center">
-            <a href="#" className="flex items-center gap-3 group" aria-label="Lodziarnia Pniewski - Strona główna">
+            <a href="#" className="flex items-center gap-3 group" aria-label="Lodziarnia Pniewscy - Strona główna">
               <img 
                 src={IMAGES.logo} 
-                alt="Lodziarnia Pniewski Logo" 
+                alt="Lodziarnia Pniewscy Logo" 
                 className="h-12 w-auto object-contain" 
                 width="48"
                 height="48"
@@ -42,7 +42,7 @@ export default function App() {
                 decoding="sync"
               />
               <span className="font-display text-xl sm:text-2xl font-bold tracking-tight hidden sm:block">
-                Lodziarnia <span className="text-berry">Pniewski</span>
+                Lodziarnia <span className="text-berry">Pniewscy</span>
               </span>
             </a>
           </div>
@@ -108,17 +108,17 @@ export default function App() {
           <div className="mb-6 sm:mb-8 flex flex-col items-center text-center">
             <img 
               src={IMAGES.logo} 
-              alt="Lodziarnia Pniewski Logo - Lody z tradycją" 
+              alt="Lodziarnia Pniewscy Logo - Lody z tradycją" 
               className="h-16 w-auto object-contain mb-4" 
               width="64"
               height="64"
               loading="lazy"
               decoding="async"
             />
-            <span className="font-display font-black text-2xl sm:text-3xl tracking-tighter uppercase block">Lodziarnia <span className="text-berry">Pniewski</span></span>
+            <span className="font-display font-black text-2xl sm:text-3xl tracking-tighter uppercase block">Lodziarnia <span className="text-berry">Pniewscy</span></span>
           </div>
           <div className="text-stone-400 font-bold uppercase tracking-widest text-[8px] sm:text-[10px] mb-8">
-             © {new Date().getFullYear()} Lodziarnia Radosław Pniewski
+             © {new Date().getFullYear()} Lodziarnia Pniewscy
           </div>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
             <a href="#" className="font-black uppercase tracking-widest text-[8px] sm:text-[10px] text-stone-900 hover:text-berry" aria-label="Powrót na górę strony">Powrót do góry</a>

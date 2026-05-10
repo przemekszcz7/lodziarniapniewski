@@ -21,7 +21,7 @@ export default function Gallery() {
               viewport={{ once: true }}
               className="relative group rounded-2xl sm:rounded-3xl overflow-hidden shadow-soft break-inside-avoid shadow-lg"
             >
-              <img src={img} className="w-full h-auto transition-transform duration-700 group-hover:scale-105" alt={`Lodziarnia Pniewski ${i}`} loading="lazy" decoding="async" />
+              <img src={img} className="w-full h-auto transition-transform duration-700 group-hover:scale-105" alt={`Lodziarnia Pniewscy ${i}`} loading="lazy" decoding="async" />
               <div className="absolute inset-0 bg-stone-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
                 <a href={img} target="_blank" rel="noreferrer" className="w-16 h-16 sm:w-20 sm:h-20 bg-white rounded-full flex items-center justify-center text-stone-900 shadow-2xl hover:bg-berry hover:text-white transition-all transform scale-50 group-hover:scale-100 duration-500" aria-label={`Otwórz zdjęcie ${i + 1} w pełnym rozmiarze`}>
                   <ExternalLink className="w-6 h-6 sm:w-8 sm:h-8" />

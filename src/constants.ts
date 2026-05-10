@@ -1,5 +1,5 @@
 export const IMAGES = {
-  logo: "https://i.postimg.cc/qqZf0qQV/make-this-image-sharper-less-202605080855-(2).png",
+  logo: "https://i.postimg.cc/L50Sd0tv/zmien-napis-pniewski-na-pniewscy-202605101145-Photoroom.png",
   hero: "https://iili.io/Bt9CrLF.jpg",
   production: "https://iili.io/BQLsygV.jpg",
   aboutUs: "https://iili.io/BQLZlO7.jpg",

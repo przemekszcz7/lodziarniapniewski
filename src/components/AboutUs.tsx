@@ -34,7 +34,7 @@ const AboutUs = memo(function AboutUs() {
                Tajemnica tkwi w <span className="italic text-berry/80 underline decoration-berry/20 decoration-4 sm:decoration-8 underline-offset-4 sm:underline-offset-8">składnikach</span>
              </h2>
              <p className="text-lg sm:text-xl text-stone-600 mb-10 leading-relaxed">
-               Lodziarnia Radosław Pniewski to efekt lat doskonalenia rzemiosła. 
+               Lodziarnia Pniewscy to efekt lat doskonalenia rzemiosła. 
                W Łosicach, Międzyrzecu Podlaskim i Zbuczynie serwujemy lody, które powstają z pasji do prawdziwego smaku.
              </p>
              

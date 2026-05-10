@@ -40,7 +40,7 @@ const Hero = memo(function Hero() {
             <div className="aspect-[4/5] rounded-[3rem] lg:rounded-[4rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] relative z-10 border-[8px] lg:border-[16px] border-white">
               <img 
                 src={IMAGES.hero} 
-                alt="Prawdziwe lody rzemieślnicze Lodziarnia Pniewski" 
+                alt="Prawdziwe lody rzemieślnicze Lodziarnia Pniewscy" 
                 className="w-full h-full object-cover" 
                 width="800"
                 height="1000"
